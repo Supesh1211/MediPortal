@@ -1,5 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    
+    <%
+    
+    HttpSession sk=request.getSession();
+    
+    if(sk.getAttribute("kp")==null)
+    {
+    	response.sendRedirect("DoctorLogin.html");
+    }
+    else
+    {
+    	%>
+    	
+    	    
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +42,7 @@
         <li><a href="#">💊 Prescriptions</a></li>
         <li><a href="#">📈 Reports</a></li>
         <li><a href="#">⚙️ Settings</a></li>
-        <li><a href="#">🚪 Logout</a></li>
+        <li><a href="DoctorLogout.jsp">🚪 Logout</a></li>
       </ul>
     </div>
 
@@ -112,3 +127,17 @@
   color: #2c3e50;
 }
 </style>
+    	
+    	<%
+    }
+    
+    
+    
+    %>
+    
+    
+    
+    
+    
+    
+    
