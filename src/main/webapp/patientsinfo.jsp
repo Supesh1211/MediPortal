@@ -93,8 +93,8 @@ while(rs.next()) {
     <td><%= rs.getString(6) %></td>
     <td><%= rs.getString(8) %></td>
     <td>
-    <a href="" class="btn btn-outline-info">Details</a>
-    <a href="" class="btn btn-outline-primary">Edit</a>
+    <a href="Detailsinfo.jsp?ID=<%= rs.getInt(1) %>" class="btn btn-outline-info">Details</a>
+    <a href="EditPatientInfo.jsp?ID=<%= rs.getInt(1) %>" class="btn btn-outline-primary">Edit</a>
     <a href="DeletePatientInfo.jsp?ID=<%= rs.getInt(1) %>" class="btn btn-outline-danger">Delete</a>
         </td>
     
